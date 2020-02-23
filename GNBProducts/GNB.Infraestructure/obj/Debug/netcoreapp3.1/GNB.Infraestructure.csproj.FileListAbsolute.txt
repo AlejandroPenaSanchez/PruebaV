@@ -1,0 +1,4 @@
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcoreapp3.1\GNB.AppCore.dll
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.csprojAssemblyReference.cache
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.AssemblyInfo.cs
