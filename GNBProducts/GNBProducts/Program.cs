@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GNB.AppCore.Interfaces;
 using GNB.Infraestructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,13 +23,14 @@ namespace GNBProducts
                 var loggerFactory = services.GetRequiredService<ILoggerFactory>();
                 try
                 {
-                    var catalogContext = services.GetRequiredService<GNBProductsContext>();
+                    var dbInitializer = services.GetRequiredService<DataBaseInitializer>();
                     
+                    dbInitializer.Initialize();
                 }
                 catch (Exception ex)
                 {
                     var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(ex, "An error occurred in the DB.");
+                    logger.LogError(ex, "An error occurred in the DB initializer.");
                 }
             }
 

@@ -2,3 +2,10 @@ C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcor
 C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.csprojAssemblyReference.cache
 C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.AssemblyInfoInputs.cache
 C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.AssemblyInfo.cs
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcoreapp3.1\GNB.Infraestructure.deps.json
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcoreapp3.1\GNB.Infraestructure.dll
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcoreapp3.1\GNB.Infraestructure.pdb
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\bin\Debug\netcoreapp3.1\GNB.AppCore.pdb
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.csproj.CopyComplete
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.dll
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.Infraestructure\obj\Debug\netcoreapp3.1\GNB.Infraestructure.pdb

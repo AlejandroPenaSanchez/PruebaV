@@ -9,15 +9,16 @@ namespace GNB.AppCore.Entities
     public class Transaction : BaseEntity, ITransaction
     {
         public string Sku { get; set; }
+        private decimal _Amount { get; set; }
         public decimal Amount 
         {
             get 
             {
-                return Amount;
+                return _Amount;
             }
             set 
             {
-                Amount = Math.Round(value, ApplicationConstants.NumbersRound);
+                _Amount = Math.Round(value, ApplicationConstants.NumbersRound);
             } 
         }
         public Currency Currency { get; set; }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GNB.AppCore.Interfaces
 {
-    public interface IRepository<T> where T : IBaseEntity
+    public interface IRepository<out T> where T : IBaseEntity
     {
         IQueryable<T> GetAll();
         T GetById(int id);

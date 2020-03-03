@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using GNB.AppCore.Entities;
 using GNB.AppCore.Interfaces;
 using GNB.AppCore.Services;
@@ -9,12 +5,10 @@ using GNB.Infraestructure.Data;
 using GNB.Infraestructure.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace GNBProducts
 {
@@ -40,7 +34,7 @@ namespace GNBProducts
         {
             // use in-memory database
             services.AddDbContext<GNBProductsContext>(context =>
-                context.UseInMemoryDatabase("Catalog"));
+                context.UseInMemoryDatabase("GNBProducts"));
 
             ConfigureServices(services);
         }
@@ -50,13 +44,16 @@ namespace GNBProducts
         {
             services.AddControllers();
 
-            services.Configure<DbInitializerSettings>(Configuration);
+            services.Configure<DbInitializerSettings>(Configuration.GetSection("DbInitializerSettings"));
             services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
-            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped(typeof(IRepository<IBaseEntity>), typeof(EfRepository<BaseEntity>));
+            services.AddScoped(typeof(IRepository<ITransaction>), typeof(EfRepository<Transaction>));
+            services.AddScoped(typeof(IRepository<ICurrencyExchange>), typeof(EfRepository<CurrencyExchange>));
             services.AddScoped<ICurrencyExchange, CurrencyExchange>();
             services.AddScoped<ITransaction, Transaction>();
             services.AddScoped<ICurrencyExchangeService, CurrencyExchangeService>();
             services.AddScoped<ITransactionService, TransactionService>();
+            services.AddScoped<DataBaseInitializer>();
 
 
 

@@ -34,7 +34,7 @@ namespace GNBProducts.Controllers
         }
 
         // GET: api/Transactions/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetTransactionById")]
         public ITransaction Get(int id)
         {
             return _TransactionsRepository.GetById(id);

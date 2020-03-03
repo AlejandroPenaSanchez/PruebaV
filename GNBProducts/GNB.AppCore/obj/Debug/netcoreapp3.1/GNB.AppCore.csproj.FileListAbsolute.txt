@@ -1,0 +1,8 @@
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\bin\Debug\netcoreapp3.1\GNB.AppCore.deps.json
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\bin\Debug\netcoreapp3.1\GNB.AppCore.dll
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\bin\Debug\netcoreapp3.1\GNB.AppCore.pdb
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\obj\Debug\netcoreapp3.1\GNB.AppCore.csprojAssemblyReference.cache
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\obj\Debug\netcoreapp3.1\GNB.AppCore.AssemblyInfoInputs.cache
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\obj\Debug\netcoreapp3.1\GNB.AppCore.AssemblyInfo.cs
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\obj\Debug\netcoreapp3.1\GNB.AppCore.dll
+C:\Users\Alejandro\source\repos\GNBProducts\GNB.AppCore\obj\Debug\netcoreapp3.1\GNB.AppCore.pdb

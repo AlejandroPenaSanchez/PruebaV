@@ -25,7 +25,7 @@ namespace GNBProducts.Controllers
             return _CurrencyExchangeRepository.GetAll().ToList();
         }
 
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetRateById")]
         public ICurrencyExchange Get(int id)
         {
             return _CurrencyExchangeRepository.GetById(id);

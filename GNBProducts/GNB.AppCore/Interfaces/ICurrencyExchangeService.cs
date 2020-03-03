@@ -7,6 +7,6 @@ namespace GNB.AppCore.Interfaces
 {
     public interface ICurrencyExchangeService
     {
-        public CurrencyExchange GetExchange(Currency from, Currency to);
+        public ICurrencyExchange GetExchange(Currency from, Currency to);
     }
 }

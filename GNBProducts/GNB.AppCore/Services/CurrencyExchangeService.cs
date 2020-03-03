@@ -9,16 +9,16 @@ namespace GNB.AppCore.Services
 {
     public class CurrencyExchangeService : ICurrencyExchangeService
     {
-        private readonly IRepository<CurrencyExchange> _CurrencyExchangeRepository;
+        private readonly IRepository<ICurrencyExchange> _CurrencyExchangeRepository;
 
-        public CurrencyExchangeService(IRepository<CurrencyExchange> currencyExchangeRepository) 
+        public CurrencyExchangeService(IRepository<ICurrencyExchange> currencyExchangeRepository) 
         {
             _CurrencyExchangeRepository = currencyExchangeRepository;
         }
 
-        public CurrencyExchange GetExchange(Currency fromCurrency, Currency toCurrency)
+        public ICurrencyExchange GetExchange(Currency fromCurrency, Currency toCurrency)
         {
-            List<CurrencyExchange> currencyExchange = _CurrencyExchangeRepository.GetAll().Where(currencyExchange => currencyExchange.FromCurrency == fromCurrency 
+            List<ICurrencyExchange> currencyExchange = _CurrencyExchangeRepository.GetAll().Where(currencyExchange => currencyExchange.FromCurrency == fromCurrency 
                                                                                                                         && currencyExchange.ToCurrency == toCurrency).ToList();
 
             if (currencyExchange.Any())

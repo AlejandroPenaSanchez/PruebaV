@@ -9,15 +9,16 @@ namespace GNB.AppCore.Entities
         public Currency FromCurrency { get; set; }
         public Currency ToCurrency { get; set; }
 
+        private decimal _Rate { get; set; }
         public decimal Rate
         {
             get 
             {
-                return Rate;
+                return _Rate;
             }
             set 
             {
-                Rate = Math.Round(value, ApplicationConstants.NumbersRound);
+                _Rate = Math.Round(value, ApplicationConstants.NumbersRound);
             }
         }
     }

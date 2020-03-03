@@ -1,10 +1,7 @@
 ﻿using GNB.AppCore.Entities;
 using GNB.AppCore.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
 namespace GNB.Infraestructure.Data
 {
@@ -15,8 +12,8 @@ namespace GNB.Infraestructure.Data
         }
 
         public DbSet<Currency> Currencies { get; set; }
-        public DbSet<ITransaction> Transactions { get; set; }
-        public DbSet<ICurrencyExchange> Rates { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<CurrencyExchange> Rates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
