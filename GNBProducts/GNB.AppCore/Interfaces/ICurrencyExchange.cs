@@ -7,9 +7,9 @@ namespace GNB.AppCore.Interfaces
 {
     public interface ICurrencyExchange : IBaseEntity
     {
-        Currency FromCurrency { get; set; }
-        Currency ToCurrency { get; set; }
+        Currency FromCurrency { get; }
+        Currency ToCurrency { get; }
 
-        decimal Rate { get; set; }
+        decimal Rate { get; }
     }
 }

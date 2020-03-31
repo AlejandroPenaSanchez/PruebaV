@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GNB.AppCore.Interfaces
+﻿namespace GNB.AppCore.Interfaces
 {
     public interface IBaseEntity
     {

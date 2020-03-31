@@ -10,6 +10,12 @@ namespace GNB.AppCore.Entities
     {
         public string Sku { get; set; }
         private decimal _Amount { get; set; }
+        public Currency Currency { get; set; }
+
+        //public Transaction(ICurrency currency) 
+        //{
+        //    Currency = currency;
+        //}
         public decimal Amount 
         {
             get 
@@ -21,6 +27,5 @@ namespace GNB.AppCore.Entities
                 _Amount = Math.Round(value, ApplicationConstants.NumbersRound);
             } 
         }
-        public Currency Currency { get; set; }
     }
 }

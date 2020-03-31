@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GNB.AppCore.Entities;
 using GNB.AppCore.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,21 @@ namespace GNBProducts.Controllers
         [HttpGet]
         public IEnumerable<ICurrencyExchange> Get()
         {
-            return _CurrencyExchangeRepository.GetAll().ToList();
+            return _CurrencyExchangeRepository.GetAll().Select(c => new CurrencyExchange
+            {
+                Id = c.Id,
+                FromCurrency = new Currency
+                {
+                    Id = c.FromCurrency.Id,
+                    Name = c.FromCurrency.Name
+                },
+                ToCurrency = new Currency
+                {
+                    Id = c.ToCurrency.Id,
+                    Name = c.ToCurrency.Name
+                },
+                Rate = c.Rate
+            }).ToList();
         }
 
         [HttpGet("{id}", Name = "GetRateById")]

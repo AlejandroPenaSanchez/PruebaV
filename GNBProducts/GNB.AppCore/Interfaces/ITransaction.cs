@@ -7,9 +7,9 @@ namespace GNB.AppCore.Interfaces
 {
     public interface ITransaction : IBaseEntity
     {
-        string Sku { get; set; }
-        decimal Amount { get; set; }
-        Currency Currency { get; set; }
+        string Sku { get; }
+        decimal Amount { get; }
+        Currency Currency { get; }
 
     }
 }

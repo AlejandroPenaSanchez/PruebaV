@@ -1,4 +1,5 @@
 ﻿using GNB.AppCore.Entities;
+using GNB.Infraestructure.Data.Entities;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 using System.IO;
@@ -34,11 +35,11 @@ namespace GNB.Infraestructure.Data
         {
             foreach (var transaction in transactions)
             {
-                _GNBProductsContext.Add(new Transaction()
+                _GNBProductsContext.Add(new EfTransaction()
                 {
                     Sku = transaction.Sku,
                     Amount = decimal.Parse(transaction.Amount),
-                    Currency = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == transaction.Currency).FirstOrDefault()
+                    CurrencyId = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == transaction.Currency).FirstOrDefault().Id
                 });
             }
 
@@ -49,12 +50,10 @@ namespace GNB.Infraestructure.Data
         {
             foreach (var rate in rates)
             {
-                var test1 = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == rate.From).FirstOrDefault();
-                var test2 = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == rate.To).FirstOrDefault();
-                _GNBProductsContext.Add(new CurrencyExchange()
+                _GNBProductsContext.Add(new EfCurrencyExchange()
                 {
-                    FromCurrency = test1,
-                    ToCurrency = test2,
+                    FromCurrencyId = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == rate.From).FirstOrDefault().Id,
+                    ToCurrencyId = _GNBProductsContext.Set<Currency>().Where<Currency>(currency => currency.Name == rate.To).FirstOrDefault().Id,
                     Rate = decimal.Parse(rate.Rate)
                 });
             }

@@ -11,27 +11,34 @@ namespace GNB.AppCore.Services
     {
         private readonly IRepository<ICurrencyExchange> _CurrencyExchangeRepository;
 
-        public CurrencyExchangeService(IRepository<ICurrencyExchange> currencyExchangeRepository) 
+        public CurrencyExchangeService(IRepository<ICurrencyExchange> currencyExchangeRepository)
         {
             _CurrencyExchangeRepository = currencyExchangeRepository;
         }
 
         public ICurrencyExchange GetExchange(Currency fromCurrency, Currency toCurrency)
         {
-            List<ICurrencyExchange> currencyExchange = _CurrencyExchangeRepository.GetAll().Where(currencyExchange => currencyExchange.FromCurrency == fromCurrency 
+            List<ICurrencyExchange> currencyExchange = _CurrencyExchangeRepository.GetAll().Where(currencyExchange => currencyExchange.FromCurrency == fromCurrency
                                                                                                                         && currencyExchange.ToCurrency == toCurrency).ToList();
 
             if (currencyExchange.Any())
                 return currencyExchange.First();
 
+            var conversions = ShortestPath();
 
-            return new CurrencyExchange(); 
+            return CalculeRate(conversions);
         }
 
-
-        private void shortestPath() 
+        //Dijkstra's Algorithm
+        private int[] ShortestPath()
         {
-        
+            return null;
+        }
+
+        private CurrencyExchange CalculeRate(int[] conversions) 
+        {
+
+            return null;
         }
 
     }

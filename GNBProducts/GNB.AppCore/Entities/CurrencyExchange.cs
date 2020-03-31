@@ -10,6 +10,13 @@ namespace GNB.AppCore.Entities
         public Currency ToCurrency { get; set; }
 
         private decimal _Rate { get; set; }
+
+        //public CurrencyExchange(ICurrency fromCurrency, ICurrency toCurrency) 
+        //{
+        //    FromCurrency = fromCurrency;
+        //    ToCurrency = toCurrency;
+        //}
+
         public decimal Rate
         {
             get 

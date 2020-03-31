@@ -15,7 +15,8 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Moq": "4.13.1",
           "coverlet.collector": "1.2.0",
-          "xunit": "2.4.1"
+          "xunit": "2.4.1",
+          "xunit.runner.visualstudio": "2.4.1"
         },
         "runtime": {
           "GNB.UnitTests.dll": {}
@@ -1822,6 +1823,11 @@
           }
         }
       },
+      "xunit.runner.visualstudio/2.4.1": {
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": "16.5.0"
+        }
+      },
       "GNB.AppCore/1.0.0": {
         "runtime": {
           "GNB.AppCore.dll": {}
@@ -2891,6 +2897,13 @@
       "sha512": "sha512-7e/1jqBpcb7frLkB6XDrHCGXAbKN4Rtdb88epYxCSRQuZDRW8UtTfdTEVpdTl8s4T56e07hOBVd4G0OdCxIY2A==",
       "path": "xunit.extensibility.execution/2.4.1",
       "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
+    },
+    "xunit.runner.visualstudio/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mBXd1lp1TQr4to2nFv+c4Tf+RnPoQPKglzwLdbdirOUxRaJsCUNDUx2y7E6j9ajgISlTTp1CydFBZCRCUIrwDg==",
+      "path": "xunit.runner.visualstudio/2.4.1",
+      "hashPath": "xunit.runner.visualstudio.2.4.1.nupkg.sha512"
     },
     "GNB.AppCore/1.0.0": {
       "type": "project",
